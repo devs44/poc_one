@@ -7,6 +7,8 @@ const PORT=5000
 const dbEmp=require("./employee.js")
 const dbCon=require("./contacts.js")
 
+// require('./sequelize/models/index')
+
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
@@ -28,7 +30,7 @@ app.get('/contacts',dbCon.getContact)
 
 app.put('/contacts/add',dbCon.createContact)
 
-app.put('/contacts/:id', dbDep.updateContact)
+app.put('/contacts/:id', dbCon.updateContact)
 
 app.delete('/contacts/:id', dbCon.deleteContact)
 
