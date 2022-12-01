@@ -12,9 +12,11 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     return queryInterface.bulkInsert('Users', [{
-        name: 'John Doe',
-        
+     await queryInterface.bulkInsert('Users', [{
+        name: 'Hari',
+        email:'hari@gmail.com',
+        createdAt: new Date(),
+        updatedAt:new Date()
       }], {})
   },
 
